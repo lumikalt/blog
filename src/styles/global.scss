@@ -1,0 +1,85 @@
+@import "./_variables.scss";
+
+@font-face {
+  font-family: "FORCED SQUARE";
+  src: url("./font/FORCEDSQUARE.woff2") format("woff2"),
+    url("./font/FORCEDSQUARE.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "FORCED SQUARE", noto;
+  font-size: 18px;
+
+  background: $Background;
+  color: $Foreground;
+
+  margin: auto;
+  padding: 20px;
+  max-width: 120ch;
+  text-align: justify;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration-style: dotted;
+  -moz-text-decoration-style: dotted;
+  color: $AccentSecondary;
+}
+
+nav a {
+  margin-right: 10px;
+}
+textarea {
+  width: 100%;
+  font-size: 19px;
+}
+input {
+  font-size: 19px;
+}
+content {
+  line-height: 1.6;
+}
+table {
+  width: 100%;
+}
+img {
+  max-width: 90%;
+  height: auto;
+}
+code {
+  padding: 2px 5px;
+  background-color: $BackgroundDarker;
+  font-family: "FORCED SQUARE";
+}
+pre {
+  padding: 1rem;
+}
+pre > code {
+  all: unset;
+}
+blockquote {
+  border: 1px dotted $Border;
+  color: $Accent;
+  padding: 2px 20px 2px 20px;
+  margin: 0px;
+  font-style: italic;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
