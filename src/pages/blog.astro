@@ -20,15 +20,18 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
       ul {
         list-style-type: none;
         padding: unset;
+
         li {
           display: flex;
+
           time {
             flex: 0 0 130px;
             font-style: italic;
             color: #888;
           }
-          ul li a:visited {
-            color: #8e32dc;
+          
+          a:visited {
+            color: #f5c2e7;
           }
         }
       }
@@ -44,9 +47,9 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
               <li>
                 <time datetime={post.frontmatter.pubDate}>
                   {new Date(post.frontmatter.pubDate).toLocaleDateString(
-                    "pt-pt",
+                    "en-us",
                     {
-                      year: "numeric",
+                      year: "2-digit",
                       month: "short",
                       day: "numeric"
                     }
