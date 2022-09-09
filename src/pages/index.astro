@@ -1,6 +1,5 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 ---
@@ -9,16 +8,246 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style lang="scss">
+      // Colors: Catppuccin
+      $Background: #1e1e2e;
+      $BackgroundSecondary: #302d41;
+      $Foreground: #d9e0ee;
+      $ForegroundSecondary: #96cdfb;
+      $Accent: #f5c2e7;
+      $AccentSecondary: #b5e8e0;
+      $Border: #575268;
+
+      @font-face {
+        font-family: "FORCED SQUARE";
+        src: url("./font/FORCEDSQUARE.woff2") format("woff2"),
+          url("./font/FORCEDSQUARE.woff") format("woff");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      html,
+      body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      body {
+        line-height: 16px;
+        font-family: "FORCED SQUARE";
+        font-size: 14px;
+
+        background: #0f0f1d;
+        color: $Foreground;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      img {
+        width: 220px;
+        height: 200px;
+        border-radius: 5%;
+        -webkit-border-radius: 5%;
+        -moz-border-radius: 5%;
+        -ms-border-radius: 5%;
+        -o-border-radius: 5%;
+      }
+
+      a {
+        text-decoration-style: dotted;
+        -moz-text-decoration-style: dotted;
+        color: $AccentSecondary;
+      }
+
+      footer {
+        margin-top: 10px;
+        height: auto;
+      }
+
+      .container {
+        background: $Background;
+        border: 1px dotted $Border;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+
+        .separator {
+          border-left: 1px dotted $Border;
+        }
+
+        .left,
+        .right {
+          width: max(min(30vw, 320px), 240px);
+        }
+
+        .left {
+          padding-right: 20px;
+        }
+
+        .right {
+          padding-left: 20px;
+
+          text-align: right;
+
+          li {
+            direction: rtl;
+          }
+        }
+
+        .name {
+          font-size: 24px;
+          margin-bottom: 10px;
+          padding-top: 10px;
+        }
+
+        .pronouns {
+          color: $Accent;
+          font-size: 14px;
+          display: inline-flex;
+        }
+
+        .desc {
+          text-align: justify;
+        }
+
+        .comment {
+          font-size: small;
+          text-align: right;
+          margin-right: 10px;
+        }
+
+        .links {
+          text-align: center;
+        }
+
+        ul {
+          padding-right: 30px;
+        }
+      }
+
+      @media only screen and (max-width: 599px) {
+        body {
+          padding: 0;
+          margin: 0;
+        }
+        .container {
+          padding: 10px;
+          min-height: 80%;
+          align-items: center;
+
+          .separator {
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 90%;
+            border-top: 1px dotted $Border;
+          }
+
+          .left,
+          .right {
+            padding: 10px;
+            text-align: justify;
+          }
+
+          ul,
+          li {
+            text-align: justify;
+            direction: ltr;
+          }
+        }
+
+        .container {
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+
+        .links {
+          margin-bottom: 20px;
+        }
+      }
+
+      @media only screen and (min-width: 1199px) {
+        body,
+        footer,
+        .pronouns {
+          font-size: 16px;
+        }
+
+        .name {
+          font-size: 20px;
+        }
+      }
+
+      @media only screen and (min-width: 1499px) {
+        body,
+        footer,
+        .pronouns {
+          font-size: 18px;
+        }
+
+        img {
+          width: 250px;
+          height: 250px;
+        }
+
+        .left,
+        .right {
+          width: 400px;
+        }
+
+        .name {
+          font-size: 24px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <Header title={SITE_TITLE} />
-    <main>
-      <h1>Welcome to my blog!</h1>
-      <p>
-        Sometimes I'll post somethings I write here, hopefully I'll write some
-        cool stuff soon!
-      </p>
-    </main>
+    <div class="container">
+      <div class="left">
+        <img
+          src="https://avatars.githubusercontent.com/u/99078103?v=4"
+          alt=""
+          width="220"
+          height="220"
+        />
+        <div class="name">
+          Lumi Kalt
+          <div class="pronouns">⋅ she/her</div>
+        </div>
+        <div class="desc">
+          Programmer with low self-esteem and lack of motivation. Loves to learn
+          new things, but gets bored easily.
+        </div>
+        <br />
+        <div class="desc links">
+          <a href="https://miruku.cafe/@lumi">FEDI</a> |
+          <a href="https://github.com/lumikalt">GITHUB</a> |
+          <a href="/blog">BLOG</a> |
+          <a href="mailto:lumi.mia.kalt@gmail.com">MAIL</a>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="right">
+        <div class="name">PROJECTS</div>
+        <div class="desc">
+          <ul>
+            <li>My future stuffs go here</li>
+          </ul>
+          <div class="comment">...I have no idea what to do.</div>
+        </div>
+      </div>
+    </div>
     <Footer />
   </body>
 </html>
