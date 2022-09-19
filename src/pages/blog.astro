@@ -29,7 +29,7 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
             font-style: italic;
             color: #888;
           }
-          
+
           a:visited {
             color: #f5c2e7;
           }
@@ -51,7 +51,7 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
                     {
                       year: "2-digit",
                       month: "short",
-                      day: "numeric"
+                      day: "2-digit"
                     }
                   )}
                 </time>

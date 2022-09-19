@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "Markdown Style Guide"
+title: "Markdown Sample"
 description: "Sample Markdown"
 pubDate: "Sep 07 2022"
 ---
