@@ -116,11 +116,12 @@ footer {
   body {
     padding: 0;
     margin: 0;
+
+    margin-left: 15px;
+    margin-right: 15px;
   }
   .container {
     padding: 10px;
-    width: calc(100vw - 20px);
-    // min-height: 80%;
     align-items: center;
 
     .separator {
