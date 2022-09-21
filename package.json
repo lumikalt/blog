@@ -16,5 +16,10 @@
     "astro": "latest",
     "rollup": "latest",
     "sass": "latest"
+  },
+  "devDependencies": {
+    "postcss": "latest",
+    "autoprefixer": "latest",
+    "cssnano": "latest"
   }
 }
