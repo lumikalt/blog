@@ -1,4 +1,3 @@
-
 [submodule "src/pages/blog"]
 	path = src/pages/blog
 	url = https://github.com/lumikalt/blog
