@@ -36,4 +36,4 @@ All commands are run from the root of the project, from a terminal:
 
 ---
 
-2022 @ Lumi Kalt + Genshi
+2022 @ Lumi Kalt + Geshi
