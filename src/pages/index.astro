@@ -1,6 +1,5 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
 import "../styles/home.scss";
@@ -12,9 +11,56 @@ import "../styles/home.scss";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <div class="container">
-        
+    <div class="bg"></div>
+    <div class="noise">
+      <div class="inner"></div>
     </div>
-    <Footer />
+    <main>
+      <div class="avatar">
+        <img
+          src="https://avatars.githubusercontent.com/u/99078103?v=4"
+          alt=""
+          width="128"
+          height="128"
+          class="inner"
+        />
+      </div>
+      <div class="spacing"></div>
+      <div class="container">
+        <h1>✨ lumi kalt</h1>
+        <h2>she/her || it/its</h2>
+        <div class="links">
+          <a
+            href="https://github.com/lumikalt"
+            target="_blank"
+            rel="noopener noreferrer">
+            <img src="/icons/github.svg" alt="Github" />
+          </a>
+          <a
+            href="https://twitter.com/lumikalt"
+            target="_blank"
+            rel="noopener noreferrer">
+            <img src="/icons/twitter.svg" alt="Twitter" />
+          </a>
+          <a
+            href="mailto:lumi.mia.kalt@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer">
+            <img src="/icons/mail.svg" alt="Mail" />
+          </a>
+          <a href="/blog">
+            <img src="/icons/blog.svg" alt="Blog" />
+          </a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a
+        href="https://nitter.pussthecat.org/ecryf_art/status/1526844235277709312"
+        target="_blank"
+        rel="noopener noreferrer">
+        bg src
+      </a>
+    </footer>
   </body>
 </html>

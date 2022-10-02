@@ -5,6 +5,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://localhost:3000",
+  site: "https://lumikalt.vercel.app",
   integrations: [mdx(), sitemap()]
 });
