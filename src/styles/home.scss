@@ -158,6 +158,8 @@ footer {
   position: absolute;
   bottom: 8px;
   right: 8px;
+
+  z-index: 3; 
 }
 
 @media screen and (max-width: 768px) {
